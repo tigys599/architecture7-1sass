@@ -1,13 +1,39 @@
-/** @format */
 // Script required to compile to css. Change Directory as needed
 //"compile:sass": "sass sass/main.scss public/stylesheets/style.css -w"
 
-@import 'abstracts/functions';
-@import 'abstracts/mixins';
-@import 'abstracts/variables';
+// main.scss
 
-@import 'base/animations';
-@import 'base/base';
-@import 'base/typography';
+// Abstracts
+@import 'abstracts/_variables';
+@import 'abstracts/_mixins';
+@import 'abstracts/_functions';
+@import 'abstracts/_media';
 
-@import 'abstracts/media.scss';
+// Base
+@import 'base/_animations';
+@import 'base/_typography';
+@import 'base/_base';
+
+// Components
+@import 'components/_buttons';
+@import 'components/_forms';
+@import 'components/_cards';
+
+// Layout
+@import 'layout/_header';
+@import 'layout/_footer';
+@import 'layout/_grid';
+
+// Pages
+@import 'pages/_home';
+@import 'pages/_about';
+@import 'pages/_contact';
+
+// Themes
+@import 'themes/_default';
+@import 'themes/_alternate';
+
+// Vendors
+@import 'vendors/_normalize';
+// @import 'vendors/_bootstrap';
+// @import 'vendors/_mantine';

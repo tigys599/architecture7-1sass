@@ -1,14 +1,70 @@
-# 7-1
+# Project Name
 
-The 7-1 architecture is a design pattern for structuring Sass (or Scss) projects. It is composed of 7 different folders and 1 file. The 7 folders are:
+This project uses the 7-1 architecture pattern for organizing Sass (Scss) files. The structure consists of the following folders:
 
-base: contains global styles, such as CSS reset and typography.
-components: contains specific, reusable components, such as buttons, forms, and cards.
-layout: contains styling for the overall layout of the site, such as the grid system and header/footer.
-pages: contains page-specific styles, if necessary.
-themes: contains styling for different themes or color schemes.
-abstracts: contains Sass tools and helpers, such as variables and mixins.
-vendors: contains third-party CSS libraries and frameworks.
-The 1 file is the main.scss file, which imports all the different files from the folders and compiles them into a single CSS file.
+1. abstracts/
+2. base/
+3. components/
+4. layout/
+5. pages/
+6. themes/
+7. vendors/
 
-The 7-1 architecture is a way to keep the code organized, modular, and easy to maintain. It allows for easy scalability, reusability, and flexibility of the styles.
+The `main.scss` file imports all styles from the folders and compiles them into a single CSS file.
+
+## Folder Descriptions
+
+- `abstracts/`: Sass tools and helpers, such as variables, mixins, functions, and media queries.
+- `base/`: Global styles such as CSS resets, animations, typography, and basic HTML elements styling.
+- `components/`: Reusable components like buttons, forms, cards, and other UI elements.
+- `layout/`: Overall structure of the site, including styles for the header, footer, and grid system.
+- `pages/`: Page-specific styles that may not be shared across the entire site.
+- `themes/`: Various theme or color scheme styles for different designs or branding.
+- `vendors/`: Third-party CSS libraries and frameworks.
+
+## Usage
+
+To use the 7-1 architecture in your project, follow these steps:
+
+1. Create the seven folders (`abstracts/`, `base/`, `components/`, `layout/`, `pages/`, `themes/`, and `vendors/`) in your project's Sass (Scss) directory.
+2. Create the `main.scss` file in the same directory as the folders.
+3. Import the individual files from the seven folders into the `main.scss` file using the `@import` directive. The order of imports should follow the folder structure as shown below:
+
+```scss
+// main.scss
+
+// Abstracts
+@import 'abstracts/_variables';
+@import 'abstracts/_mixins';
+@import 'abstracts/_functions';
+@import 'abstracts/_media';
+
+// Base
+@import 'base/_animations';
+@import 'base/_typography';
+@import 'base/_base';
+
+// Components
+@import 'components/_buttons';
+@import 'components/_forms';
+@import 'components/_cards';
+
+// Layout
+@import 'layout/_header';
+@import 'layout/_footer';
+@import 'layout/_grid';
+
+// Pages
+@import 'pages/_home';
+@import 'pages/_about';
+@import 'pages/_contact';
+
+// Themes
+@import 'themes/_default';
+@import 'themes/_alternate';
+
+// Vendors
+@import 'vendors/_normalize';
+@import 'vendors/_bootstrap';
+@import 'vendors/_mantine';
+```
