@@ -1,4 +1,4 @@
-# Project Name
+# 7-1 Architecture
 
 This project uses the 7-1 architecture pattern for organizing Sass (Scss) files. The structure consists of the following folders:
 
